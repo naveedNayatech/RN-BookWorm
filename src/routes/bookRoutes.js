@@ -59,7 +59,7 @@ try {
         books,
         currentPage: page,
         totalBooks: total,
-        totalPages: Math.ceil(totalBooks / limit),
+        totalPages: Math.ceil(total / limit),
 
     })
 
