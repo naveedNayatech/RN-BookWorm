@@ -51,7 +51,7 @@ try {
     .sort({ createdAt: -1}) // descending
     .skip(skip)
     .limit(limit)
-    .populate("user", "username profileimage");
+    .populate("user", "username profileImage");
 
     const total = await Book.countDocuments();
 
@@ -60,10 +60,7 @@ try {
         currentPage: page,
         totalBooks: total,
         totalPages: Math.ceil(total / limit),
-
     })
-
-  res.status(books); 
 
 } catch (error) {
     console.error("Error in get all books route", error);
